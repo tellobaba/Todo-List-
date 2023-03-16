@@ -7,15 +7,37 @@
 
 import SwiftUI
 
+//struct ContentView: View {
+//    var body: some View {
+//        VStack {
+//            Image(systemName: "globe")
+//                .imageScale(.large)
+//                .foregroundColor(.accentColor)
+//            Text("Hello, world!")
+//        }
+//        .padding()
+//    }
+//}
+
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView {
+            Text("First View")
+                .tabItem {
+                    Image(systemName: "1.circle")
+                    Text("First")
+                }
+            Text("Second View")
+                .tabItem {
+                    Image(systemName: "2.circle")
+                    Text("Second")
+                }
+            Text("Third View")
+                .tabItem {
+                    Image(systemName: "3.circle")
+                    Text("Third")
+                }
         }
-        .padding()
     }
 }
 

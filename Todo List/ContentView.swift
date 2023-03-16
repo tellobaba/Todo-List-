@@ -7,35 +7,31 @@
 
 import SwiftUI
 
-//struct ContentView: View {
-//    var body: some View {
-//        VStack {
-//            Image(systemName: "globe")
-//                .imageScale(.large)
-//                .foregroundColor(.accentColor)
-//            Text("Hello, world!")
-//        }
-//        .padding()
-//    }
-//}
-
 struct ContentView: View {
     var body: some View {
+
         TabView {
-            Text("First View")
-                .tabItem {
-                    Image(systemName: "1.circle")
-                    Text("First")
+            NavigationView{
+                TaskListView()
+            }
+            .tabItem{
+                    Image("Checked Checkbox")
+                        .renderingMode(.template)
                 }
-            Text("Second View")
-                .tabItem {
-                    Image(systemName: "2.circle")
-                    Text("Second")
+            InboxView()
+                .tabItem{
+                    Image("Remainder")
+                        .renderingMode(.template)
                 }
-            Text("Third View")
-                .tabItem {
-                    Image(systemName: "3.circle")
-                    Text("Third")
+            RemainderView()
+                .tabItem{
+                    Image("Timer")
+                        .renderingMode(.template)
+                }
+            SettingsView()
+                .tabItem{
+                    Image("Settings")
+                        .renderingMode(.template)
                 }
         }
     }
